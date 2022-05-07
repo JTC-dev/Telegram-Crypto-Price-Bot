@@ -4,16 +4,12 @@ import telebot
 import constants
 from binance.client import Client
 
-
 client = Client(constants.binance_api_key, constants.binance_secret)
-
-
 
 tb = telebot.TeleBot(constants.token, parse_mode=None) #ENTER YOUR BOT TOKEN FROM THE BOTFATHER
 
 chatid = constants.chatid #ENTER YOUR CHAT ID
 notify = 0
-
 
 raw_price = client.get_avg_price(symbol='BTCUSDC')
 
